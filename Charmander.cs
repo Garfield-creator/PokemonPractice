@@ -1,0 +1,32 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection.Emit;
+using System.Text;
+using System.Threading.Tasks;
+using System.Xml.Linq;
+
+namespace PokemonPractice;
+
+internal class Charmander(int level, List<Attack> attacks) : FirePokemon(CHARMANDER, level, attacks), IEvolvable
+{
+
+    const string CHARMANDER = "Charmander";
+    const string CHARMELEON = "Charmeleon";
+    const string CHARIZARD = "Charizard";
+
+    public void Evolve()
+    {
+        if (Name == CHARMANDER) {
+            Name = CHARMELEON;
+            Level += 10;
+            Console.WriteLine($"{CHARMANDER} is evolving... It is now a {CHARMELEON} and its level is " + Level);
+        }
+        else if (Name == CHARMELEON)
+        {
+            Name = CHARIZARD;
+            Level += 10;
+            Console.WriteLine($"{CHARMELEON} is evolving... It is now a {CHARIZARD} and its level is " + Level);
+        }
+    }
+}
