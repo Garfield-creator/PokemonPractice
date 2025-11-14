@@ -38,4 +38,21 @@ internal class Charmander(int level, List<Attack> attacks) : FirePokemon(CHARMAN
             Console.WriteLine($"{CHARMELEON} is evolving... It is now a {CHARIZARD} and its level is " + Level);
         }
     }
+
+    public override void Speak()
+    {
+        String speak = "";
+        switch (Name) {
+            case CHARMANDER:
+                speak = "char char";
+                break;
+            case CHARMELEON:
+                speak = "char-meleon";
+                break;
+            case CHARIZARD:
+                speak = "CHARIZARD";
+                break;
+        }
+        Console.WriteLine($"{Name} says: {speak}!");
+    }
 }

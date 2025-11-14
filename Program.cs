@@ -35,6 +35,7 @@ class PokemonGame
         ];
         foreach (Pokemon pokemon in PokemonTeam)
         {
+            pokemon.Speak();
             pokemon.RaiseLevel();
             pokemon.Attack();
             if (pokemon is IEvolvable evolvable) evolvable.Evolve();

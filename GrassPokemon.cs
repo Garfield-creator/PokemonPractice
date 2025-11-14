@@ -1,6 +1,6 @@
 ﻿namespace PokemonPractice;
 
-class GrassPokemon : Pokemon
+abstract class GrassPokemon : Pokemon
 {
     public GrassPokemon(String name, int level, List<Attack> attacks) : base(name, level, attacks)
     {

@@ -46,4 +46,9 @@ abstract class Pokemon
         Level++;
         Console.WriteLine($"{Name} has leveled up to level {Level}!");
     }
+
+    public virtual void Speak()
+    {
+        Console.WriteLine($"{Name} says: Roar!");
+    }
 }

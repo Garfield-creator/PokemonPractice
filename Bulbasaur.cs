@@ -30,4 +30,21 @@ internal class Bulbasaur(int level, List<Attack> attacks) : GrassPokemon(BULBASA
             Console.WriteLine($"{IVYSAUR} is evolving... It is now a {VENUSAUR} and its level is " + Level);
         }
     }
+    public override void Speak()
+    {
+        String speak = "";
+        switch (Name)
+        {
+            case BULBASAUR:
+                speak = "Bulba";
+                break;
+            case IVYSAUR:
+                speak = "Ivy ivy";
+                break;
+            case VENUSAUR:
+                speak = "Veenuu";
+                break;
+        }
+        Console.WriteLine($"{Name} says: {speak}!");
+    }
 }

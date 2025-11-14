@@ -31,4 +31,21 @@ internal class Squirtle(int level, List<Attack> attacks) : GrassPokemon(SQUIRTLE
             Console.WriteLine($"{WARTORTLE} is evolving... It is now a {BLASTOISE} and its level is " + Level);
         }
     }
+    public override void Speak()
+    {
+        String speak = "";
+        switch (Name)
+        {
+            case SQUIRTLE:
+                speak = "sqrtle squrtle";
+                break;
+            case WARTORTLE:
+                speak = "tortle tortle";
+                break;
+            case BLASTOISE:
+                speak = "Blaast toise";
+                break;
+        }
+        Console.WriteLine($"{Name} says: {speak}!");
+    }
 }
