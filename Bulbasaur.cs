@@ -7,6 +7,14 @@ internal class Bulbasaur(int level, List<Attack> attacks) : GrassPokemon(BULBASA
     const string IVYSAUR = "Ivysaur";
     const string VENUSAUR = "Venusaur";
 
+    public override void RaiseLevel()
+    {
+        Level++;
+        Console.WriteLine($"{Name} has leveled up to level {Level}!");
+        if (Level > 13 && Name == BULBASAUR) Evolve();
+        if (Level > 35 && Name == IVYSAUR) Evolve();
+    }
+
     public void Evolve()
     {
         if (Name == BULBASAUR)

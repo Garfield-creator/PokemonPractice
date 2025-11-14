@@ -7,6 +7,15 @@ internal class Squirtle(int level, List<Attack> attacks) : GrassPokemon(SQUIRTLE
     const string WARTORTLE = "Wartortle";
     const string BLASTOISE = "Blastoise";
 
+
+    public override void RaiseLevel()
+    {
+        Level++;
+        Console.WriteLine($"{Name} has leveled up to level {Level}!");
+        if (Level > 17 && Name == SQUIRTLE) Evolve();
+        if (Level > 31 && Name == WARTORTLE) Evolve();
+    }
+
     public void Evolve()
     {
         if (Name == SQUIRTLE)

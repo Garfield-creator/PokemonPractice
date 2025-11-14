@@ -42,7 +42,7 @@ abstract class Pokemon
         }
     }
 
-    public void RaiseLevel() {
+    public virtual void RaiseLevel() {
         Level++;
         Console.WriteLine($"{Name} has leveled up to level {Level}!");
     }

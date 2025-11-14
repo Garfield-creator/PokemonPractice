@@ -15,6 +15,15 @@ internal class Charmander(int level, List<Attack> attacks) : FirePokemon(CHARMAN
     const string CHARMELEON = "Charmeleon";
     const string CHARIZARD = "Charizard";
 
+
+    public override void RaiseLevel()
+    {
+        Level++;
+        Console.WriteLine($"{Name} has leveled up to level {Level}!");
+        if (Level > 15 && Name == CHARMANDER) Evolve();
+        if (Level > 35 && Name == CHARMELEON) Evolve();
+    }
+
     public void Evolve()
     {
         if (Name == CHARMANDER) {
